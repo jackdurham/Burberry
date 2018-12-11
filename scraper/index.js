@@ -16,11 +16,8 @@ const options = {
 //Function making the request for data
 promise(options)
   .then($ => {
-    console.log($('body').html());
-
+    
     const homePage = $('body').html();
-
-    console.log($);
 
     //Function creating new HTML file and adding scraped data
     fs.appendFile('index.html', homePage, function (err) {
